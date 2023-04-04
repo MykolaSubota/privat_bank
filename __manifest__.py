@@ -8,7 +8,7 @@
     'sequence': 100,
     'category': 'Inventory/Inventory',
     'depends': ['base', 'account'],
-    'data': [],
+    'data': ['views/account_bank_statement_view.xml'],
     'installable': True,
     'application': False,
     'auto_install': False,

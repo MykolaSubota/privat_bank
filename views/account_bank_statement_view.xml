@@ -1,0 +1,14 @@
+<odoo>
+    <record id="ir_cron_get_statements_from_privat_bank" model="ir.cron">
+        <field name="name">Downloading statements from PrivatBank</field>
+        <field name="model_id" ref="model_account_bank_statement"/>
+        <field name="state">code</field>
+        <field name="code">model.create_statements_privat_bank()</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">30</field>
+        <field name="nextcall" eval="(DateTime.now()+timedelta(minutes=30)).strftime('%Y-%m-%d 00:00:00')" />
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="doall">True</field>
+   </record>
+</odoo>
